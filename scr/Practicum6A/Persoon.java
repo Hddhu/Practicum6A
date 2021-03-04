@@ -36,6 +36,16 @@ public class Persoon {
         }
     }
 
+    public ArrayList bepaalGamesNietInBezit(ArrayList<Game> g){
+        ArrayList gamesNietInBezit = new ArrayList<Game>();
+        for(Game i : g){
+            if(!mijnGames.contains(i)){
+                gamesNietInBezit.add(i);
+            }
+        }
+        return gamesNietInBezit;
+    }
+
     public String toString() {
         String persoon = naam + " heeft een budget van €" + String.format("%.2f", budget) + " en bezit de volgende games:";
         for (Game games : mijnGames) {
