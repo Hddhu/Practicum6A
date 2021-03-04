@@ -35,6 +35,17 @@ public class Persoon {
             return false;
         }
     }
+    public Game zoekGameOpNaam(String g){
+        Game spel = null;
+        for (Game game : mijnGames){
+            if (game.getNaam().equals(g)){
+                spel = game;
+            } else {
+                spel = null;
+            }
+        }
+        return spel;
+    }
 
     public ArrayList bepaalGamesNietInBezit(ArrayList<Game> g){
         ArrayList gamesNietInBezit = new ArrayList<Game>();

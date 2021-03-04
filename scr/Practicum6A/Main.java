@@ -20,6 +20,9 @@ public class Main {
         System.out.println("p1 verkoopt g1 aan p2:"+(p1.verkoop(g1, p2) ? "" : " niet")+" gelukt");
         System.out.println("\np1: " +p1+ "\n\np2: " +p2+ "\n");
 
+        Game game1 = p1.zoekGameOpNaam("Just Cause 3");
+        System.out.println("p1 heeft Just Cause 3 " + (game1 != null ? "wel!" : "niet!"));
+
         ArrayList<Game> teKoop = new ArrayList<Game>();
         teKoop.add(g1);
         teKoop.add(new Game("Mario Kart 8", 2019, 35.00));
