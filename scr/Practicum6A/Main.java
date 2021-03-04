@@ -3,12 +3,10 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        int releaseJaar1 = LocalDate.now().getYear() - 2; // 1 jaar geleden
-        System.out.println(releaseJaar1);
+        int releaseJaar1 = LocalDate.now().getYear() - 1; // 1 jaar geleden
         Game g1 = new Game("Just Cause 3", releaseJaar1, 49.98);
         Game g2 = new Game("Need for Speed: Rivals", releaseJaar1, 45.99);
         Game g3 = new Game("Need for Speed: Rivals", releaseJaar1, 45.99);
-        System.out.println(g1.huidigeWaarde());
         Persoon p1 = new Persoon("Eric", 200);
         Persoon p2 = new Persoon("Hans", 55);
 

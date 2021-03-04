@@ -16,17 +16,18 @@ public class Game {
         return naam;
     }
     public double huidigeWaarde() {
-        int jaar = LocalDate.now().getYear() - releaseJaar;
+        int verschilJaar = LocalDate.now().getYear() - releaseJaar;
         double nieuwePrijs = nieuwprijs;
-        if (jaar == 0){
-            nieuwePrijs = nieuwePrijs - (nieuwePrijs*0.0);
-        } else{
-            for (int i = 0; i < jaar; i++) {
+        if (verschilJaar == 0){
+            nieuwePrijs = nieuwprijs;
+        } else {
+            for (int i = 0; i < verschilJaar; i++) {
                 nieuwePrijs = nieuwePrijs - (nieuwePrijs*0.3);
             }
         }
         return nieuwePrijs;
     }
+
     public boolean equals(Object andereObject)  {
         boolean gelijkeObjecten = false;
         if (andereObject instanceof Game)   {
